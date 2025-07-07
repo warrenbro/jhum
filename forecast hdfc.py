@@ -14,8 +14,8 @@ df['yt'] = np.maximum(df['Open'], df['Close'].shift(1))
 df['Lt'] = (df['Low'] - df['yt']) / df['yt']
 df['Ut'] = (df['High'] - df['xt']) / df['xt']
 df = df.dropna().reset_index(drop=True)
-
-# -----------------------------
+print(df.tail(3))
+'''# -----------------------------
 # Step 2: Define lagged feature function
 # -----------------------------
 def create_lagged_features(series, lags):
@@ -150,4 +150,4 @@ plt.ylabel("Ut")
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
-plt.show()
+plt.show()'''
